@@ -110,5 +110,18 @@ while running:
                     playerX_change=-5
                     event.key==pygame.K_RIGHT:
                     playerX_change=5
-                    
-                    
+                    while running:
+
+                    #RGB = Red, Green, Blue#
+                    screen.fill((0, 0 ,0))
+                    #Background image#
+                    screen.blit(background, (0,0))
+                    for event in pygame.event.get():
+                        if event.type == pygame.QUIT:
+                            running = False
+
+                        #if keystrokeis pressed check wheter its rightor left#
+                        if event.type == pygame.KEYDOWN:
+                            if event.key == pygame.K_LEFT:
+                                playerX_change = -5
+                                if event
